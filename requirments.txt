@@ -1,0 +1,7 @@
+pytube
+pytubefix
+youtube_transcript_api 
+SpeechRecognition
+pydub
+pronouncing
+setuptools
