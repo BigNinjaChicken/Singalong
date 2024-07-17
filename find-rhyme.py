@@ -56,13 +56,14 @@ def FindRhymeInLyric(spoke_last_word):
 
             words = lyric_text.split()
             lyric_last_word = words[-1]
+            
 
             if (doTheyRhyme(spoke_last_word, lyric_last_word)):
                 print(lyric_text)
 
                 # Play Audio
                 audiofilein = op("audiofilein1")
-                audiofilein.par.file = youtube_video_list[row, 0].val + ".mp4"
+                audiofilein.par.file = youtube_video_list[row, 0].val + ".wav"
                 #audiofilein.par.cuepoint = lyric["start"]
                 #
                 audiofilein.par.trimstart = lyric["start"]
@@ -72,7 +73,7 @@ def FindRhymeInLyric(spoke_last_word):
                 audiofilein.par.play = True
                 audiofilein.par.cue.pulse()
 
-                print(op("feedback1").par.reset)
+                
                 op("feedback1").par.reset.pulse()
 
                 return
